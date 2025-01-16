@@ -1,0 +1,125 @@
+{
+  "videos": [
+    {
+      "id": "1",
+      "title": "Introduction to React Hooks",
+      "description": "Learn the basics of React Hooks and how they can simplify your React components. This video covers useState, useEffect, and custom hooks.",
+      "category": "Technology",
+      "views": 150000,
+      "uploadDate": "2024-01-15",
+      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "videoUrl": "https://example.com/videos/react-hooks-intro.mp4"
+    },
+    {
+      "id": "2",
+      "title": "Advanced CSS Techniques",
+      "description": "Discover advanced CSS techniques to create stunning web designs. Topics include CSS Grid, Flexbox, and CSS animations.",
+      "category": "Technology",
+      "views": 100000,
+      "uploadDate": "2024-02-20",
+      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "videoUrl": "https://example.com/videos/advanced-css.mp4"
+    },
+    {
+      "id": "3",
+      "title": "The Future of Artificial Intelligence",
+      "description": "Explore the cutting-edge developments in AI and machine learning. Learn about neural networks, deep learning, and the ethical implications of AI.",
+      "category": "Technology",
+      "views": 200000,
+      "uploadDate": "2024-03-10",
+      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "videoUrl": "https://example.com/videos/ai-future.mp4"
+    },
+    {
+      "id": "4",
+      "title": "Learn Piano in 30 Days",
+      "description": "Start your journey to becoming a pianist with this comprehensive 30-day course. Learn basic chords, scales, and popular songs.",
+      "category": "Music",
+      "views": 300000,
+      "uploadDate": "2024-04-05",
+      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "videoUrl": "https://example.com/videos/piano-course.mp4"
+    },
+    {
+      "id": "5",
+      "title": "History of Rock Music",
+      "description": "Take a journey through the evolution of rock music, from its roots in blues to modern-day rock genres. Featuring iconic songs and artists.",
+      "category": "Music",
+      "views": 250000,
+      "uploadDate": "2024-05-12",
+      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "videoUrl": "https://example.com/videos/rock-history.mp4"
+    },
+    {
+      "id": "6",
+      "title": "Understanding Quantum Physics",
+      "description": "Delve into the mind-bending world of quantum physics. Learn about wave-particle duality, superposition, and quantum entanglement.",
+      "category": "Education",
+      "views": 180000,
+      "uploadDate": "2024-06-18",
+      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "videoUrl": "https://example.com/videos/quantum-physics.mp4"
+    },
+    {
+      "id": "7",
+      "title": "The Art of Public Speaking",
+      "description": "Master the skills of effective public speaking. Learn techniques for overcoming stage fright, structuring your speech, and engaging your audience.",
+      "category": "Education",
+      "views": 220000,
+      "uploadDate": "2024-07-22",
+      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "videoUrl": "https://example.com/videos/public-speaking.mp4"
+    },
+    {
+      "id": "8",
+      "title": "Cooking Italian Cuisine",
+      "description": "Learn to cook authentic Italian dishes from a professional chef. This video covers classic pasta recipes, pizza making, and traditional desserts.",
+      "category": "Food",
+      "views": 280000,
+      "uploadDate": "2024-08-30",
+      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "videoUrl": "https://example.com/videos/italian-cooking.mp4"
+    },
+    {
+      "id": "9",
+      "title": "Mastering League of Legends",
+      "description": "Improve your League of Legends skills with advanced strategies, champion guides, and pro tips from top players.",
+      "category": "Gaming",
+      "views": 500000,
+      "uploadDate": "2024-09-05",
+      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "videoUrl": "https://example.com/videos/lol-mastery.mp4"
+    },
+    {
+      "id": "10",
+      "title": "FIFA World Cup Highlights",
+      "description": "Relive the most exciting moments from the latest FIFA World Cup. Featuring stunning goals, dramatic saves, and unforgettable celebrations.",
+      "category": "Sports",
+      "views": 1000000,
+      "uploadDate": "2023-07-15",
+      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "videoUrl": "https://example.com/videos/world-cup-highlights.mp4"
+    },
+    {
+      "id": "11",
+      "title": "Exploring Ancient Rome",
+      "description": "Take a virtual tour through the streets of ancient Rome. Discover the Colosseum, Roman Forum, and other iconic landmarks as they looked 2000 years ago.",
+      "category": "Travel",
+      "views": 150000,
+      "uploadDate": "2023-10-20",
+      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "videoUrl": "https://example.com/videos/ancient-rome-tour.mp4"
+    },
+    {
+      "id": "12",
+      "title": "Behind the Scenes: Blockbuster Movie Making",
+      "description": "Get an exclusive look at how Hollywood blockbusters are made. From special effects to stunts, uncover the secrets of movie magic.",
+      "category": "Entertainment",
+      "views": 750000,
+      "uploadDate": "2024-11-01",
+      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "videoUrl": "https://example.com/videos/movie-making.mp4"
+    }
+  ]
+}
+
