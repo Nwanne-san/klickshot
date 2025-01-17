@@ -97,7 +97,7 @@ const SearchPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 pt-2rem">
       <Header />
       <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 mt-16">
         <div className="px-4 py-6 sm:px-0">
@@ -113,35 +113,39 @@ const SearchPage: React.FC = () => {
                 onChange={handleSearchChange}
                 className="flex-grow"
               />
-              <Select value={category} onValueChange={handleCategoryChange}>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Category" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">All Categories</SelectItem>
-                  {categories.map((cat) => (
-                    <SelectItem key={cat} value={cat}>
-                      {cat}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              <Select value={uploadDate} onValueChange={handleUploadDateChange}>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Upload Date" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="any">Any Time</SelectItem>
-                  <SelectItem value="1">Last 24 hours</SelectItem>
-                  <SelectItem value="7">Last week</SelectItem>
-                  <SelectItem value="30">Last month</SelectItem>
-                  <SelectItem value="365">Last year</SelectItem>
-                </SelectContent>
-              </Select>
-              <Button onClick={resetFilters}>Reset Filters</Button>
+              <div className="flex gap-2">
+                  
+                  <Select value={category} onValueChange={handleCategoryChange}>
+                    <SelectTrigger className="w-[180px]">
+                      <SelectValue placeholder="Category" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">All Categories</SelectItem>
+                      {categories.map((cat) => (
+                        <SelectItem key={cat} value={cat}>
+                          {cat}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <Select value={uploadDate} onValueChange={handleUploadDateChange}>
+                    <SelectTrigger className="w-[180px]">
+                      <SelectValue placeholder="Upload Date" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="any">Any Time</SelectItem>
+                      <SelectItem value="1">Last 24 hours</SelectItem>
+                      <SelectItem value="7">Last week</SelectItem>
+                      <SelectItem value="30">Last month</SelectItem>
+                      <SelectItem value="365">Last year</SelectItem>
+                    </SelectContent>
+                  </Select>
+              <Button className="text-nowrap" onClick={resetFilters}>Reset Filters</Button>
+
+              </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {isLoading
               ? Array(12)
                   .fill(0)

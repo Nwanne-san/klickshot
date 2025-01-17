@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { Logo, LogoDark } from "../../../public";
 import { useRouter } from "next/navigation";
 import { Search, User } from "lucide-react";
 import { ModeToggle } from "../mode-toggle";
@@ -14,6 +15,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { categories } from "@/data";
+import Image from "next/image";
 
 const Header: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -44,7 +46,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 shadow-sm transition-transform duration-300 ease-in-out z-50 ${
+      className={`fixed top-0 left-0 right-0 bg-indigo-50 dark:bg-black shadow-sm transition-transform duration-300 ease-in-out z-50 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -52,12 +54,8 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
-              <span className="sr-only">Klickshot</span>
-              <img
-                className="h-8 w-auto sm:h-10"
-                src="/placeholder.svg?height=40&width=40"
-                alt="Klickshot"
-              />
+              <Image src={Logo} alt="" className="dark:hidden"/>
+              <Image src={LogoDark} alt="" className="dark:block hidden"/>
             </Link>
           </div>
           <NavigationMenu>
@@ -65,7 +63,7 @@ const Header: React.FC = () => {
               <NavigationMenuItem>
                 <Link
                   href="/"
-                  className="text-base font-medium text-gray-500 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2"
+                  className="text-base hidden sm:flex font-medium text-gray-500 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2"
                 >
                   Home
                 </Link>
@@ -93,7 +91,7 @@ const Header: React.FC = () => {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-          <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 space-x-4">
+          <div className="flex items-center justify-end md:flex-1 lg:w-0 space-x-4">
             <Link
               href="/search"
               className="whitespace-nowrap text-base font-medium text-gray-500 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
@@ -103,7 +101,7 @@ const Header: React.FC = () => {
             </Link>
             <Link
               href="/profile"
-              className="whitespace-nowrap text-base font-medium text-gray-500 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+              className=" hidden sm:flex whitespace-nowrap text-base font-medium text-gray-500 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
             >
               <User className="h-5 w-5" />
             </Link>

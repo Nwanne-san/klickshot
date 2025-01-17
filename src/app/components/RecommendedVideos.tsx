@@ -17,7 +17,7 @@ export function RecommendedVideos({
     .slice(0, 4);
 
   return (
-    <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
+    <div className="bg-white dark:bg-black shadow rounded-lg p-6">
       <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
         More from {currentCategory}
       </h2>

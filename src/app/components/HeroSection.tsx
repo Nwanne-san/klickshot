@@ -53,10 +53,10 @@ const HeroSection: React.FC = () => {
     "Discover and share amazing videos from creators around the world.";
 
   return (
-    <div className="relative bg-gray-50 dark:bg-gray-800 overflow-hidden">
+    <div className="relative lg:h-[80vh] py-5 bg-gray-50 dark:bg-gray-900 overflow-hidden pt-[4rem]">
       <div className="max-w-7xl mx-auto">
-        <div className="relative z-10 pb-8 bg-gray-50 dark:bg-gray-800 sm:pb-16 md:pb-20 lg:flex lg:w-full lg:pb-28 xl:pb-32">
-          <div className="lg:w-1/2 lg:z-20 relative">
+        <div className="relative z-10 pb-8 bg-gray-50 dark:bg-gray-900 sm:pb-16 md:pb-20 lg:flex lg:w-full lg:pb-28 xl:pb-32">
+          <div className="sm:w-1/2 lg:z-20 relative py-5">
             <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
               <div className="sm:text-center lg:text-left">
                 <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
@@ -80,10 +80,10 @@ const HeroSection: React.FC = () => {
                   {subSentence}
                 </motion.p>
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                  <div className="rounded-md shadow">
+                  <div className="rounded-md sm:shadow">
                     <button
                       onClick={scrollToPopularVideos}
-                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                      className="sm:w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
                     >
                       Trending Videos
                     </button>
@@ -93,8 +93,8 @@ const HeroSection: React.FC = () => {
             </main>
           </div>
 
-          <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <div className="relative h-52 w-full sm:h-72 md:h-96 lg:w-full lg:h-full overflow-hidden">
+          <div className="sm:absolute t-8  inset-y-0 right-0 sm:w-1/2">
+            <div className="relative h-64 w-full sm:h-72 md:h-96 lg:w-full lg:h-full overflow-hidden">
               <AnimatePresence initial={false}>
                 {!isLoading && trendingVideos.length > 0 && (
                   <motion.div

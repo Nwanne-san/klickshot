@@ -3,11 +3,11 @@ import { Video } from "@/types";
 
 export function VideoDetails({ video }: { video: Video }) {
   return (
-    <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
-      <h1 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
+    <div className="bg-transparent dark:bg-transparent  rounded-lg dark:shadow-md ">
+      <h1 className=" px-3 sm:text-2xl font-bold mb-2 text-gray-900 dark:text-white">
         {video.title}
       </h1>
-      <div className="flex justify-between items-center mb-4">
+      <div className=" px-3 flex sm:flex-row flex-col justify-between sm:items-center gap-2  mb-4">
         <p className="text-gray-600 dark:text-gray-400">
           {video.views.toLocaleString()} views •{" "}
           {new Date(video.uploadDate).toLocaleDateString()}
@@ -27,7 +27,7 @@ export function VideoDetails({ video }: { video: Video }) {
           </button>
         </div>
       </div>
-      <p className="text-gray-700 dark:text-gray-300">{video.description}</p>
+      <p className="text-gray-700 dark:bg-gray-800 px-2.5 py-2 rounded-lg  dark:text-gray-300">{video.description}</p>
     </div>
   );
 }
