@@ -2,20 +2,6 @@
 
 Klickshot is a cutting-edge video sharing platform built with Next.js, React, and TypeScript. This project showcases a modern, responsive design with features like video playback, search functionality, and a dark mode toggle.
 
-## Table of Contents
-
-1. [Features](#features)
-2. [Tech Stack](#tech-stack)
-3. [Getting Started](#getting-started)
-4. [Project Structure](#project-structure)
-5. [Key Components](#key-components)
-6. [Styling](#styling)
-7. [State Management](#state-management)
-8. [Routing](#routing)
-9. [Performance Optimizations](#performance-optimizations)
-10. [Accessibility](#accessibility)
-
-
 ## Features
 
 - Responsive design for mobile and desktop
@@ -39,12 +25,31 @@ Klickshot is a cutting-edge video sharing platform built with Next.js, React, an
 
 ## Getting Started
 
-### Prerequisites
 
-- Node.js 14.x or later
-- npm or yarn
 
-### Installation
+## How to get started
 
-1. Clone the repository:
+Clone the repository to your local system 
+```bash
+git clone https://github.com/Nwanne-san/klickshot
+```
 
+
+Install dependencies and run the development build
+
+```bash
+npm i
+npm run dev
+```
+
+You should see something like this:
+
+```sh
+> klickshot@0.1.0 dev
+> next dev
+
+   ▲ Next.js 14.1.0
+   - Local:        http://localhost:3000
+
+ ✓ Ready in 1431ms
+`
