@@ -45,7 +45,7 @@ export default function VideoPage() {
                 </>
               ) : video ? (
                 <>
-                  <VideoPlayer videoUrl={video.videoUrl} />
+                  <VideoPlayer videoUrl={video.videoUrl} thumbnail={video.thumbnail}  />
                   <VideoDetails video={video} />
                 </>
               ) : (

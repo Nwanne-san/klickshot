@@ -7,8 +7,8 @@
       "category": "Technology",
       "views": 150000,
       "uploadDate": "2024-01-15",
-      "thumbnail": "/placeholder.svg?height=180&width=320",
-      "videoUrl": "https://example.com/videos/react-hooks-intro.mp4"
+      "thumbnail": "/thumbnails/js-thumb.jpg",
+      "videoUrl": "/videos/react_hooks.mp4"
     },
     {
       "id": "2",
@@ -17,7 +17,7 @@
       "category": "Technology",
       "views": 100000,
       "uploadDate": "2024-02-20",
-      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "thumbnail": "/thumbnails/css-thumb.jpg",
       "videoUrl": "https://example.com/videos/advanced-css.mp4"
     },
     {
@@ -27,7 +27,7 @@
       "category": "Technology",
       "views": 200000,
       "uploadDate": "2024-03-10",
-      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "thumbnail": "/thumbnails/ai-thumb.jpg",
       "videoUrl": "https://example.com/videos/ai-future.mp4"
     },
     {
@@ -37,7 +37,7 @@
       "category": "Music",
       "views": 300000,
       "uploadDate": "2024-04-05",
-      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "thumbnail": "/thumbnails/piano-thumb.jpg",
       "videoUrl": "https://example.com/videos/piano-course.mp4"
     },
     {
@@ -47,7 +47,7 @@
       "category": "Music",
       "views": 250000,
       "uploadDate": "2024-05-12",
-      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "thumbnail": "/thumbnails/css-thumb.jpg",
       "videoUrl": "https://example.com/videos/rock-history.mp4"
     },
     {
@@ -57,7 +57,7 @@
       "category": "Education",
       "views": 180000,
       "uploadDate": "2024-06-18",
-      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "thumbnail": "/thumbnails/quant-thumb.jpg",
       "videoUrl": "https://example.com/videos/quantum-physics.mp4"
     },
     {
@@ -67,7 +67,7 @@
       "category": "Education",
       "views": 220000,
       "uploadDate": "2024-07-22",
-      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "thumbnail": "/thumbnails/speak-thumb.jpg",
       "videoUrl": "https://example.com/videos/public-speaking.mp4"
     },
     {
@@ -77,7 +77,7 @@
       "category": "Food",
       "views": 280000,
       "uploadDate": "2024-08-30",
-      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "thumbnail": "/thumbnails/cuisine-thumb.jpg",
       "videoUrl": "https://example.com/videos/italian-cooking.mp4"
     },
     {
@@ -87,7 +87,7 @@
       "category": "Gaming",
       "views": 500000,
       "uploadDate": "2024-09-05",
-      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "thumbnail": "/thumbnails/league-thumb.jpg",
       "videoUrl": "https://example.com/videos/lol-mastery.mp4"
     },
     {
@@ -97,7 +97,7 @@
       "category": "Sports",
       "views": 1000000,
       "uploadDate": "2023-07-15",
-      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "thumbnail": "/thumbnails/fifa-thumb.jpg",
       "videoUrl": "https://example.com/videos/world-cup-highlights.mp4"
     },
     {
@@ -107,7 +107,7 @@
       "category": "Travel",
       "views": 150000,
       "uploadDate": "2023-10-20",
-      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "thumbnail": "/thumbnails/rome-thumb.jpg",
       "videoUrl": "https://example.com/videos/ancient-rome-tour.mp4"
     },
     {
@@ -117,9 +117,52 @@
       "category": "Entertainment",
       "views": 750000,
       "uploadDate": "2024-11-01",
-      "thumbnail": "/placeholder.svg?height=180&width=320",
+      "thumbnail": "/thumbnails/scenes-thumb.jpg",
       "videoUrl": "https://example.com/videos/movie-making.mp4"
+    },
+    {
+      "id": "13",
+      "title": "Amazing Sunset Timelapse",
+      "description": "Watch this breathtaking timelapse of a beautiful sunset.",
+      "category": "Nature",
+      "views": 1000000,
+      "uploadDate": "2023-07-15",
+      "thumbnail": "/thumbnails/sunset-thumb.jpg",
+      "videoUrl": "/videos/sunset.mp4"
+    },
+    {
+      "id": "14",
+      "title": "How to Make the Perfect Pizza",
+      "description":
+        "Learn the secrets to making a delicious homemade pizza from scratch.",
+      "category": "Cooking",
+      "views": 500000,
+      "uploadDate": "2023-07-10",
+      "thumbnail": "/thumbnails/pizza-thumb.jpg",
+      "videoUrl": "/videos/pizza_cuisine.mp4"
+    },
+    {
+      "id": "15",
+      "title": "10 Minute Full Body Workout",
+      "description":
+        "Get fit with this quick and effective full body workout routine.",
+      "category": "Fitness",
+      "views": 750000,
+      "uploadDate": "2023-07-12",
+      "thumbnail": "/thumbnails/workout-thumb.jpg",
+      "videoUrl": "https://example.com/videos/full-body-workout.mp4"
+    },
+    {
+      "id": "16",
+      "title": "Learn JavaScript in 1 Hour",
+      "description": "A crash course in JavaScript basics for beginners.",
+      "category": "Education",
+      "views": 250000,
+      "uploadDate": "2023-07-08",
+      "thumbnail": "/thumbnails/js-thumb.jpg",
+      "videoUrl": "/videos/javascript.mp4"
     }
+    
   ]
 }
 

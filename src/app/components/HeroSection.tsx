@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { TrendingVideo } from "@/types";
+import Image from "next/image";
 
 const HeroSection: React.FC = () => {
   const [trendingVideos, setTrendingVideos] = useState<TrendingVideo[]>([]);
@@ -53,13 +54,22 @@ const HeroSection: React.FC = () => {
     "Discover and share amazing videos from creators around the world.";
 
   return (
-    <div className="relative lg:h-[80vh] py-5 bg-gray-50 dark:bg-gray-900 overflow-hidden pt-[4rem]">
+    <div className="relative h-[50vh] sm:h-[80vh] lg:[90vh] py-5 bg-gray-50 dark:bg-gray-900 overflow-hidden pt-[4rem] bg-[url'/5427576.mp4')] ">
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src="/videos/5427576.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      ></video>
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       <div className="max-w-7xl mx-auto">
-        <div className="relative z-10 pb-8 bg-gray-50 dark:bg-gray-900 sm:pb-16 md:pb-20 lg:flex lg:w-full lg:pb-28 xl:pb-32">
-          <div className="sm:w-1/2 lg:z-20 relative py-5">
-            <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-              <div className="sm:text-center lg:text-left">
-                <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
+        <div className="relative z-10 pb-8 bg-transparent dark:bg sm:pb-16 md:pb-20 lg:flex lg:w-full lg:pb-28 xl:pb-32">
+          <div className="sm:w-2/3 lg:z-20 relative py-5">
+            <main className="mt-28 mx-auto max-w-7xl px-4 sm:mt-16 sm:px-6 md:mt-16 lg:mt-28 lg:px-8 xl:mt-36 flex sm:block flex-col h-full justify-end items-center w-full">
+              <div className="sm:text-cnter lg:text-left">
+                <h1 className="mt-5 text-3xl md:text-6xl sm:leading-[50px] font-extrabold text-white dark:text-white sm:text-5xl ">
                   {sentence.split("").map((char, index) => (
                     <motion.span
                       key={`${char}-${index}`}
@@ -72,20 +82,20 @@ const HeroSection: React.FC = () => {
                   ))}
                 </h1>
                 <motion.p
-                  className="mt-3 text-base text-gray-500 dark:text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+                  className="mt-3 text-base text-center sm:text-start flex justify-center text-white max-w-72 sm:text-lg sm:max-w-md sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.4, delay: sentence.length * 0.07 }}
                 >
                   {subSentence}
                 </motion.p>
-                <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                <div className="mt-4 flex sm:block justify-center lg:justify-start">
                   <div className="rounded-md sm:shadow">
                     <button
                       onClick={scrollToPopularVideos}
-                      className="sm:w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                      className="w-fit flex items-center gap-2 justify-center px-4 py-1.5 sm:px-8 sm:py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
                     >
-                      Trending Videos
+                      Watch Videos
                     </button>
                   </div>
                 </div>
@@ -93,8 +103,8 @@ const HeroSection: React.FC = () => {
             </main>
           </div>
 
-          <div className="sm:absolute t-8  inset-y-0 right-0 sm:w-1/2">
-            <div className="relative h-64 w-full sm:h-72 md:h-96 lg:w-full lg:h-full overflow-hidden">
+          <div className="hidden sm:absolute t-8  inset-y-0 right-0 sm:w-1/2">
+            <div className="relative h-52 w-full sm:h-72 md:h-80 lg:w-full  overflow-hidden">
               <AnimatePresence initial={false}>
                 {!isLoading && trendingVideos.length > 0 && (
                   <motion.div
@@ -112,7 +122,7 @@ const HeroSection: React.FC = () => {
                     <Link
                       href={`/video/${trendingVideos[currentVideoIndex].id}`}
                     >
-                      <img
+                      <Image
                         src={
                           trendingVideos[currentVideoIndex].thumbnail ||
                           "/placeholder.svg"

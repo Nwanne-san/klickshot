@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Play } from "lucide-react";
 // import Image from "next/image";
 import { Video } from "@/types";
+import Image from "next/image";
 
 interface VideoGridProps {
   videos: Video[];
@@ -21,8 +22,8 @@ export function VideoGrid({ videos }: VideoGridProps) {
               href={`/video/${video.id}`}
               className="group relative"
             >
-              <div className="w-full aspect-w-16 aspect-h-9 bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden">
-                <img
+              <div className="w-full aspect-w-16 aspect-h-9 bg-gray-200 relative dark:bg-gray-700 rounded-lg overflow-hidden">
+                <Image
                   src={video.thumbnail || "/placeholder.svg"}
                   alt={video.title}
                   className="w-full h-full object-center object-cover transition-opacity group-hover:opacity-75"
@@ -31,10 +32,10 @@ export function VideoGrid({ videos }: VideoGridProps) {
                   <Play className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </div>
-              <h3 className="mt-4 text-sm font-semibold text-gray-700 dark:text-gray-300">
+              <h3 className="mt-4 text-sm font-semibold text-gray-700 group-hover:text-indigo-600 dark:text-gray-300">
                 {video.title}
               </h3>
-              <p className="mt-1 text-xs sm:text-sm text-gray-500 dark:text-gray-400">
+              <p className="mt-1 text-xs sm:text-sm text-gray-500 group-hover:text-indigo-600 dark:text-gray-400">
                 {video.views.toLocaleString()} views • {video.uploadDate}
               </p>
             </Link>

@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Header from "@/components/layout/Navbar";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Play, RotateCcw } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -114,34 +115,37 @@ const SearchPage: React.FC = () => {
                 className="flex-grow"
               />
               <div className="flex gap-2">
-                  
-                  <Select value={category} onValueChange={handleCategoryChange}>
-                    <SelectTrigger className="w-[180px]">
-                      <SelectValue placeholder="Category" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="all">All Categories</SelectItem>
-                      {categories.map((cat) => (
-                        <SelectItem key={cat} value={cat}>
-                          {cat}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                  <Select value={uploadDate} onValueChange={handleUploadDateChange}>
-                    <SelectTrigger className="w-[180px]">
-                      <SelectValue placeholder="Upload Date" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="any">Any Time</SelectItem>
-                      <SelectItem value="1">Last 24 hours</SelectItem>
-                      <SelectItem value="7">Last week</SelectItem>
-                      <SelectItem value="30">Last month</SelectItem>
-                      <SelectItem value="365">Last year</SelectItem>
-                    </SelectContent>
-                  </Select>
-              <Button className="text-nowrap" onClick={resetFilters}>Reset Filters</Button>
-
+                <Select value={category} onValueChange={handleCategoryChange}>
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="All Categories" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Categories</SelectItem>
+                    {categories.map((cat) => (
+                      <SelectItem key={cat} value={cat}>
+                        {cat}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <Select
+                  value={uploadDate}
+                  onValueChange={handleUploadDateChange}
+                >
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Any Time" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="any">Any Time</SelectItem>
+                    <SelectItem value="1">Last 24 hours</SelectItem>
+                    <SelectItem value="7">Last week</SelectItem>
+                    <SelectItem value="30">Last month</SelectItem>
+                    <SelectItem value="365">Last year</SelectItem>
+                  </SelectContent>
+                </Select>
+                <Button className="text-nowrap" onClick={resetFilters}>
+                  <RotateCcw />
+                </Button>
               </div>
             </div>
           </div>
@@ -162,17 +166,20 @@ const SearchPage: React.FC = () => {
                     href={`/video/${video.id}`}
                     className="group"
                   >
-                    <div className="w-full aspect-w-16 aspect-h-9 bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden">
+                    <div className="w-full aspect-w-16 aspect-h-9 bg-gray-200 dark:bg-gray-700 relative rounded-lg overflow-hidden">
                       <img
                         src={video.thumbnail || "/placeholder.svg"}
                         alt={video.title}
                         className="w-full h-full object-center object-cover group-hover:opacity-75"
                       />
+                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                        <Play className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </div>
                     </div>
-                    <h3 className="mt-2 text-sm text-gray-700 dark:text-gray-300">
+                    <h3 className="mt-2 text-sm text-gray-700 group-hover:text-indigo-600 dark:text-gray-300">
                       {video.title}
                     </h3>
-                    <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                    <p className="mt-1 text-xs text-gray-500 dark:text-gray-400 group-hover:text-indigo-600">
                       {video.views.toLocaleString()} views •{" "}
                       {new Date(video.uploadDate).toLocaleDateString()}
                     </p>
