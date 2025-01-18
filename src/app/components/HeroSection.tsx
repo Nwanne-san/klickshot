@@ -5,7 +5,6 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { TrendingVideo } from "@/types";
-import Image from "next/image";
 
 const HeroSection: React.FC = () => {
   const [trendingVideos, setTrendingVideos] = useState<TrendingVideo[]>([]);
@@ -122,7 +121,7 @@ const HeroSection: React.FC = () => {
                     <Link
                       href={`/video/${trendingVideos[currentVideoIndex].id}`}
                     >
-                      <Image
+                      <img
                         src={
                           trendingVideos[currentVideoIndex].thumbnail ||
                           "/placeholder.svg"

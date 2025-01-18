@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Play } from "lucide-react";
 // import Image from "next/image";
 import { Video } from "@/types";
-import Image from "next/image";
 
 interface VideoGridProps {
   videos: Video[];
@@ -23,7 +22,7 @@ export function VideoGrid({ videos }: VideoGridProps) {
               className="group relative"
             >
               <div className="w-full aspect-w-16 aspect-h-9 bg-gray-200 relative dark:bg-gray-700 rounded-lg overflow-hidden">
-                <Image
+                <img
                   src={video.thumbnail || "/placeholder.svg"}
                   alt={video.title}
                   className="w-full h-full object-center object-cover transition-opacity group-hover:opacity-75"
